@@ -1,0 +1,108 @@
+1.
+function receivesTwoNumbers (num1, num2){
+  let arr = [];
+  for ( let i=num1; i<= num2; i++) {
+    
+    if (allDigitAreEven(i)) {
+      arr.push(i)
+    }
+  }
+  if (arr.length > 0) {
+    return arr.join(',')
+  } else {
+    return `Such numbers does not exist.`;
+  }
+}
+function allDigitAreEven (num) {
+ let numString = num + '';
+ for (let j=0; j<numString.length; j++){
+   if (numString[j] %2===1) {
+     return false
+   }
+ }
+ return true
+} 
+console.log (receivesTwoNumbers (19,42))
+2. 
+function removeByLetter (arr, str) {
+  let arr1 = [];
+   for (let i =0; i<arr.length; i++) {
+     for (let j=0; j<arr[i].length; j++) {
+       if (arr[i][j] !== str) {
+         arr1.push(arr[i])
+       }
+       return arr1 
+     }
+   }     
+                 
+}  console.log (removeByLetter ([`hi`, `Game of thrones`, `ok`], `G`))
+
+ 3.
+ function filterRange (arr, a, b) {
+   const arr1 =[];
+   for (let i=0; i<arr.length; i++){
+     if (arr[i] > a && arr[i] < b) {
+       arr1.push(arr[i]);
+       }
+       } return arr1
+       
+ } console.log (filterRange([1, 10, 20, 30], 9, 23))
+ 
+ 4.
+ function phoneNumber (num) {
+ num1= num.split('')
+ let result;
+ for (let i=0; i<num1.length; i++){
+ 
+ if (num1.length < 9 && num1.length >10) 
+   return `Bad Number`
+ 
+ if (num1.length ===9) 
+   return `Good`
+ 
+ if (num1.length === 10 && num1[0] === '+' ) {
+   let num2;
+   num2 = num1.slice(1, -1);
+   if (typeof num2 === `number`) {
+   
+   } return num2.join('')
+   }
+ let count = 0;
+ if (num1[i]=== '+') {
+   count++
+   if (count > 1){
+      return `Bad Number`
+   }
+ }
+ if (num1[i]=== " ") 
+    return num1.join('');
+ 
+ }
+ }
+ console.log (phoneNumber(`+876000898`))
+
+ 5.
+ function lengthen (str1, str2) {
+  if (str1.length !== str2.length && str1.length>0 && str2.length >0 ) {
+    
+     if (str1.length-1>str2.length-1) {
+       let a = [];
+     while(a.length < str1.length-1){
+         a.push(str2);
+     }
+     return a.join('');
+      }
+ 
+      if (str1.length-1<str2.length-1) {
+       let a = [];
+         while(a.length < str2.length-1){
+         a.push(str1);
+     }
+        return a.join('');
+      }
+     
+      }  
+      }
+ 
+ console.log (lengthen(`abcdefg`, `ab`))
+ 
